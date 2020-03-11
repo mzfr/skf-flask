@@ -63,6 +63,8 @@ import { FirstLoginComponent } from './first-login/first-login.component';
 import { UndefinedComponent } from './undefined/undefined.component';
 import { QuestionnaireComponent } from './questionnaire/questionnaire.component';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CustomMaterial } from './material.module';
 
 @NgModule({
   declarations: [
@@ -118,7 +120,9 @@ import { NgSelectModule } from '@ng-select/ng-select';
         },
       },
     }),
-    NgSelectModule
+    NgSelectModule,
+    BrowserAnimationsModule,
+    CustomMaterial
   ],
   providers: [GuardService, HighlightJsService],
   bootstrap: [AppComponent]

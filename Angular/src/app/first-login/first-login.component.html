@@ -73,32 +73,55 @@
                       </div>
 
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 style="text-align: center" class="modal-title">Activate a user account</h4>
-            </div>
-            <div class="modal-body">
-              <form [formGroup]="activateForm">
-                 <input formControlName="user_id" maxlength="20"  id="user_id" placeholder="user ID" autocomplete="off" class="form-control placeholder-no-fix"/>
-                <br>
-                <input formControlName="accessToken" maxlength="20" id="token" placeholder="Access token" autocomplete="off" class="form-control placeholder-no-fix"/>
-                <br>
-                <input formControlName="email" maxlength="50"  id="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix" />
-                <br>
-                <input formControlName="username" maxlength="20"  id="username" placeholder="Username" autocomplete="off" class="form-control placeholder-no-fix"/>
-                <br>
-                <input formControlName="password" maxlength="50" type="password"  id="password" placeholder="Password" autocomplete="off" class="form-control placeholder-no-fix"/>
-                <br>
-                <input formControlName="repassword" maxlength="50" type="password" id="repassword" placeholder="Re-type password" autocomplete="off" class="form-control placeholder-no-fix"/>
-                <div class="modal-footer centered">
-                  <button type="submit" (click)="activateUser()" class="btn btn-theme03" id="create" >Create account</button>
-                  <a href="#" routerLink="/login"> <button class="btn btn-theme03" type="submit">Cancel</button></a>
-                </div>
-              </form>
-            </div>
+            <mat-card class="modal-content">
+              <mat-card-header>
+                <mat-card-title color="white">Activate a user account</mat-card-title>
+              </mat-card-header>
+
+              <mat-card-content>
+                <form [formGroup]="activateForm">
+                  <mat-form-field class="example-full-width">
+                    <input matInput formControlName="user_id" maxlength="60" id="user_id" placeholder="user ID" autocomplete="off"
+                      class="form-control placeholder-no-fix" />
+                  </mat-form-field>
+                  <br>
+                  
+                  <mat-form-field class="example-full-width">
+                    <input matInput formControlName="accessToken" maxlength="20" id="token" placeholder="Access token" autocomplete="off"
+                    class="form-control placeholder-no-fix" />
+                  </mat-form-field>
+                  <br>
+                  
+                  <mat-form-field>
+                    <input matInput formControlName="email" maxlength="50" id="email" placeholder="Email" autocomplete="off"
+                      class="form-control placeholder-no-fix" />
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field>
+                    <input matInput formControlName="username" maxlength="20" id="username" placeholder="Username" autocomplete="off"
+                    class="form-control placeholder-no-fix" />
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field>
+                    <input matInput formControlName="password" maxlength="50" type="password" id="password" placeholder="Password"
+                    autocomplete="off" class="form-control placeholder-no-fix" />
+                  </mat-form-field>
+                  <br>
+                  <mat-form-field>
+                    <input matInput formControlName="repassword" maxlength="50" type="password" id="repassword"
+                      placeholder="Re-type password" autocomplete="off" class="form-control placeholder-no-fix" />
+                  </mat-form-field>
+                </form>
+              </mat-card-content>
+
+              <mat-card-actions class="modal-footer centered">
+                <button mat-raised-button color="primary" type="submit" (click)="activateUser()" id="create" >Create account</button>
+                <a href="#" routerLink="/login"> <button mat-raised-button color="primary" type="submit">Cancel</button></a>
+              </mat-card-actions>
+            </mat-card>
             <!-- js placed at the end of the document so the pages load faster -->
             <script src="assets/js/bootstrap.min.js"></script>
-          </div>
+          <!-- </div> -->
         </div>
       </div>
       <div class="copy">
