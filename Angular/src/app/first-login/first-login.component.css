@@ -1,0 +1,25 @@
+.form-width {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.full-width{
+    width: 100%;
+} 
+::-webkit-input-placeholder {
+  color: black;
+  font-size: 13px;
+}
+::-moz-placeholder {
+  color: black;
+  font-size: 13px;
+}
+:-ms-input-placeholder {
+  color: black;
+  font-size: 13px;
+}
+::placeholder{
+    color: black;
+    line-height: 200px;
+}
